@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Layout } from './components/index.js'
-import { Home, AboutUs, ContactUs } from './pages/index.js'
+import { Home, AboutUs, ContactUs, Shop, ProductSingle, Login } from './pages/index.js'
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +22,18 @@ const routes = createBrowserRouter([
       {
         path: '/contact-us',
         element: <ContactUs/>
+      },
+      {
+        path:'/shop',
+        element:<Shop/>
+      },
+      {
+        path:'/product/:id',
+        element:<ProductSingle/>
+      },
+      {
+        path:'/login',
+        element:<Login/>
       }
     ]
   }
