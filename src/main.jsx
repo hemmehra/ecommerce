@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Layout } from './components/index.js'
 import { Home, AboutUs, ContactUs, Shop, ProductSingle, Login } from './pages/index.js'
+import { Provider } from 'react-redux'
+import { store } from './app/store.js'
 
 const routes = createBrowserRouter([
   {
@@ -41,6 +42,8 @@ const routes = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routes}/>
+    <Provider store={store}>
+      <RouterProvider router={routes}/>
+    </Provider>
   </React.StrictMode>,
 )
