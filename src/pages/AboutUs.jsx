@@ -25,7 +25,7 @@ export default function AboutUs() {
               className="text-center mt-5 bg-red-400 p-1 text-white"
               onClick={() => dispatch(removeTodo(todo.id))}
             >
-              Remove Todo
+              Remove Todo 
             </button>
           </div>
         </div>
